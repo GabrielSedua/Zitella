@@ -1,8 +1,8 @@
 html {
   position: relative;
   min-height: 100%;
-  border-style: outset;
-  border-color: #100e1c;
+  border-style: double;
+  border-color: #201d31;
 }
 
 .blue{
