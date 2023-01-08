@@ -74,11 +74,9 @@
 <script src="assets/designer/js/script.js"></script>
 <script src="assets/designer-gallery/script.js"></script>
 
-        <h3 class="containers white">Not Running Yet</h3>
-        <div class="containers white"><p>Zitella is working hard to get it fixed<br></p></div>
-
-
-
+        <h3 class="containers white">Sign in - Comment away</h3>
+        <div class="containers white"><p>Zitella welcomes your comments and your feedback<br></p></div>
+        
 <br>
 <br>
 <br>
@@ -93,49 +91,6 @@
 <body ng-controller="toDoNoteController">
 
 <!-- Post posting box --------------------->
-
-<div class="containers">
-   <div class="row">
-      <div class="post" id="toDoMain">
-        <div class="input-group input-group-lg inputBox" id="content">
-            <form ng-submit="addPost()">
-            <textarea class="form-control note_area" id="task" placeholder="write something..." aria-describedby="sizing-addon1" ng-keyup="autoExpand($event)" required ng-model="content" required maxlength="1500"></textarea>
-            </div>
-        <div id="add" class="addButton blue" >
-<input type="submit" class="btn" value="Post">
-           </div>
-        </form>
-      </div>
-   </div>
-</div>
-
-
-<!-- All submitted post --------------------->
-<ul>
-  <li ng-repeat="post in posts">
-    <div class="post">
-        <div class="postContent">
-            {{post.content}}
-        </div>
-        <div class="feeds">
-            <a ng-click="likeUpdate(post)" style="cursor: pointer;">Likes</a>&nbsp;<label>{{post.likes}}</label>&nbsp;&nbsp;
-        <!-- click for toggling comment ---->
-          <a ng-click="openComment(post)" style="cursor: pointer;">Comments</a>&nbsp;<label>{{post.comments.length}}</label>
-        </div>
-        <!-- comment ox ---->
-        <div ng-if="post.commentIsOpen" class="comments">
-         <div class="postContent comment" ng-repeat="comment in post.comments">
-            {{comment}}
-               </div>
-            <form ng-submit="postComment(post)">
-                 <textarea class="form-control" id="task" placeholder="write your comment..." aria-describedby="sizing-addon1" required ng-model="post.latestComment" ></textarea>
-        <div id="add" class="addButton" ><input type="submit" class="btn blue " value="Post Comment">
-                    </div>
-               </form>
-           </div>
-      </div>
-   </li>
-</ul>
 <br>
 <br>
 <footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-76" style="background-color: #201d31;">
