@@ -4,7 +4,9 @@ html {
   border-style: double;
   border-color: #201d31;
 }
-
+.br{
+  border-radius: 20px;
+}
 .blue{
   color:#185033;
 }
