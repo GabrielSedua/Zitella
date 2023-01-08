@@ -86,6 +86,9 @@
 <br>
 <br>
 <br>
+<script src="http://js-kit.com/comments.js"></script>
+<script defer src="https://cdn.commento.io/js/commento.js"></script>
+<div id="commento"></div>
 <!------------ Main Header  --------------------->
 <body ng-controller="toDoNoteController">
 
@@ -93,46 +96,20 @@
 
 <div class="containers">
    <div class="row">
-      <div class="post" id="toDoMain">
-        <div class="input-group input-group-lg inputBox" id="content">
-            <form ng-submit="addPost()">
-            <textarea class="form-control note_area" id="task" placeholder="write something..." aria-describedby="sizing-addon1" ng-keyup="autoExpand($event)" required ng-model="content" required maxlength="1500"></textarea>
-            </div>
-        <div id="add" class="addButton blue" >
-<input type="submit" class="btn" value="Post">
-           </div>
-        </form>
-      </div>
-   </div>
-</div>
+
+
 
 
 <!------------ All submitted post --------------------->
 <ul>
-  <li ng-repeat="post in posts">
-    <div class="post">
-        <div class="postContent">
-            {{post.content}}
-        </div>
-        <div class="feeds">
-            <a ng-click="likeUpdate(post)" style="cursor: pointer;">Likes</a>&nbsp;<label>{{post.likes}}</label>&nbsp;&nbsp;
-        <!-- click for toggling comment ---->
-          <a ng-click="openComment(post)" style="cursor: pointer;">Comments</a>&nbsp;<label>{{post.comments.length}}</label>
-        </div>
-        <!-- comment ox ---->
-        <div ng-if="post.commentIsOpen" class="comments">
-         <div class="postContent comment" ng-repeat="comment in post.comments">
-            {{comment}}
-               </div>
-            <form ng-submit="postComment(post)">
-                 <textarea class="form-control" id="task" placeholder="write your comment..." aria-describedby="sizing-addon1" required ng-model="post.latestComment" ></textarea>
-        <div id="add" class="addButton" ><input type="submit" class="btn blue " value="Post Comment">
-                    </div>
-               </form>
-           </div>
-      </div>
-   </li>
+  <!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16798&num=10&ts=1673183587847");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
 </ul>
+</div>
+</div>
 <br>
 <br>
 <footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-76" style="background-color: #201d31;">
